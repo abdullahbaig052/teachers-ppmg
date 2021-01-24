@@ -1,0 +1,31 @@
+.app-status-block{
+  border-bottom: 1px solid $gallery;
+  h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $gallery;
+    margin-bottom: 0;
+  }
+
+  .info-list{
+    @extend %listreset;
+
+    li{
+      width: 25%;
+      padding: 17px 10px;
+
+      + li{
+        border-left: 1px solid $gallery;
+      }
+    }
+  }
+
+  .title{
+    color: $gray-appx;
+  }
+
+  .num{
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,35 @@
+
+#footer{
+  border-top: 3px solid $fountain-blue;
+  background: $white;
+
+  .copyright-text{
+    color: $oslo-gray;
+  }
+}
+
+.footer-logo{
+  img{
+    display: block;
+  }
+}
+
+.footer-links{
+  @extend %listreset;
+
+  li{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 0 0 20px;
+  }
+
+  a{
+    text-decoration: none;
+    color: $oslo-gray;
+    &:hover{
+      color: $fountain-blue;
+    }
+  }
+}
+
+

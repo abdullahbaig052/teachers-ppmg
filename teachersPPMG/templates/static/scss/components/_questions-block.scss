@@ -1,0 +1,29 @@
+.questions-block{
+  .title{
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .subtitle{
+    color: $gray-appx;
+  }
+
+  .questions-list{
+    @extend %listreset;
+    display: flex;
+    flex-flow: row wrap;
+
+    li{
+      width: 50%;
+      padding: 0 10px 20px 0;
+    }
+
+    a{
+      text-decoration: none;
+      color: $dark;
+      &:hover{
+        color: $primary;
+      }
+    }
+  }
+}

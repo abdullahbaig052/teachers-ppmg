@@ -1,0 +1,27 @@
+.info-links{
+  border-bottom: 1px solid $gallery;
+  a{
+    text-decoration: none;
+    color: $dark;
+    width: 100%;
+
+    &:hover{
+      background: darken($white, 5%);
+    }
+  }
+
+  .num{
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .subtitle{
+    color: $gray-appx;
+  }
+
+  .col-6{
+    &:last-child{
+      border-left: 1px solid $gallery;
+    }
+  }
+}

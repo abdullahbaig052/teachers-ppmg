@@ -1,0 +1,23 @@
+body {
+    min-width: $base-min-width;
+}
+
+a, button {
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+
+    &:hover,
+    &:active,
+    &:focus{
+        -webkit-transition: all 0.15s ease-in;
+        transition: all 0.15s ease-in;
+    }
+
+}
+
+.js-tab-hidden {
+	display:block !important;
+	left:-9999px !important;
+	position: absolute !important;
+	top:-9999px !important;
+}  

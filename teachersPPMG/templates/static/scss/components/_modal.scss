@@ -1,0 +1,96 @@
+.modal{
+
+  .modal-dialog{
+    max-width: 392px;
+  }
+
+  .modal-content{
+    border: 1px solid $geyser;
+    border-radius: 10px;
+    overflow: hidden;
+    background: $alabaster;
+  }
+
+  .modal-header{
+    background: $gallery;
+    margin: 2px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid $alto;
+    padding: 5px 18px;
+    height: 46px;
+  }
+
+  .form-title{
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .form-subtitle{
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .status-pill{
+    display: inline-block;
+    padding: 5px;
+    border-radius: 15px;
+    width: 87px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 14px;
+
+    &.under-review{
+      background: $marzipan;
+    }
+
+    &.completed{
+      background: $caribbean-green;
+      color: $white;
+    }
+
+    &.pending{
+      background: $cinnabar;
+      color: $white;
+    }
+  }
+
+  .btn-info-holder{
+    width: 188px;
+    margin: 0 auto 20px;
+    border: 1px solid $oslo-gray;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    align-items: center;
+
+    .info-icon{
+      padding-top: 2px;
+      svg{
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .info-icon{
+      width: 42px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    a{
+      flex-grow: 1;
+      padding: 10px;
+      color: $oslo-gray;
+      border-right: 1px solid $oslo-gray;
+      font-weight: bold;
+      text-decoration: none;
+      
+      &:hover{
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}

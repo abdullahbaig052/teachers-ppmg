@@ -1,0 +1,28 @@
+.title-block{
+  border-bottom: 1px solid $gallery;
+
+  svg{
+    margin: 0 0 -2px;
+  }
+
+  h1{
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+
+    span{
+      display: inline-block;
+      position: relative;
+      margin-left: 5px;
+      &:after{
+        position: absolute;
+        content: '';
+        bottom: -8px;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: $flamingo;
+      }
+    }
+  }
+}

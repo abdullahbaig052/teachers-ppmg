@@ -1,0 +1,68 @@
+// vertical align el inside parent with fixed height/min-height
+// usage 
+// html - .parent>.child
+// scss - @include v-align;
+//     or @include v-align(250px);
+//     or @include v-align(250px, bottom, before);
+//
+@mixin v-align($va-height: 100%, $va-direction: middle, $va-pseudo: after) {
+    white-space: nowrap;
+    text-align: center;
+    &:#{$va-pseudo} {
+        content: '';
+        display: inline-block;
+        vertical-align: $va-direction;
+        width: 0;
+        min-height: $va-height;
+    }
+    >* {
+        white-space: normal;
+        display: inline-block;
+        vertical-align: $va-direction;
+        max-width: 99%;
+    }
+}
+//@include inline-block(top);
+@mixin inline-block($align: top) {
+    vertical-align: $align;
+    display: inline-block;
+    letter-spacing: 0;
+    white-space: normal;
+}
+//  @include position(absolute, $top, $right, $bottom, $left);
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+// Sizing shortcuts
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+// mixin for Alignment
+@mixin align($value1, $value2) {
+  display: $value1;
+  vertical-align: $value2;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &::-moz-placeholder {opacity: 1; @content}
+  &:-moz-placeholder {@content}
+  &:-ms-input-placeholder {@content}
+  &.placeholder {@content}
+}

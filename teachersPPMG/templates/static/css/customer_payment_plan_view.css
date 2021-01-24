@@ -1,0 +1,53 @@
+.table-outer {
+  width: 100%;
+  overflow: auto;
+  padding: 25px;
+}
+
+.table-outer table {
+  width: 100%;
+}
+
+.loan-table-outer table thead tr th {
+  padding-bottom: 20px;
+}
+
+.table-outer table tbody tr td {
+  padding: 5px 0px;
+}
+
+.payment-table-outer {
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+}
+
+.payment-tbl th {
+  text-align: center;
+  padding: 10px 0px;
+  color: #f15c3b;
+}
+
+@media (max-width: 1080px) {
+  .table-outer table {
+    min-width: 992px;
+  }
+}
+
+@media (max-width: 580px) {
+  .row {
+    margin: 0px;
+  }
+}
+
+.table-outer::-webkit-scrollbar {
+  width: 2px;
+  height: 4px;
+}
+
+.table-outer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.table-outer::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
