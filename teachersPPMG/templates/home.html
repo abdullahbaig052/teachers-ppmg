@@ -44,7 +44,7 @@
                     <td><a><strong>{{teacher.first_name}}</strong></a></td>
                     <td>{{teacher.last_name}}</td>
                     <td class="d-none d-sm-block"><a>{{teacher.email}}</a></td>
-                    <td><a href="{% url 'profile_view' id=teacher.id %}">Teach</a></td>
+                    <td><a href="{% url 'profile_view' id=teacher.id %}" target="_blank">Teach</a></td>
                     <td>{{teacher.subjects_taught}}</td>
                 </tr>
                 {% endfor %}
