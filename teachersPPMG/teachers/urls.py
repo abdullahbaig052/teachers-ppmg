@@ -1,9 +1,7 @@
-import os
+from django.urls import path
 
-from django.urls import include, path
-
-from .views import Home, Profile
 from .admin_views import UploadCSV
+from .views import Home, Profile
 
 urlpatterns = [
     # Add a path with /api for Woocommerce and shopify plugin endpoints

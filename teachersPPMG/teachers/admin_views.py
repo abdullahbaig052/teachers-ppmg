@@ -1,21 +1,13 @@
-import datetime
-import logging
-import mimetypes
-import os
-from wsgiref.util import FileWrapper
+import csv
+import io
 
-from django.conf import settings
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from django.http import FileResponse, StreamingHttpResponse, HttpResponseRedirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.template.response import TemplateResponse
-from django.utils import timezone
-from django.views import View
 from django.views.generic import TemplateView
 
 from .models import TeachersModel
-import csv, io
 
 
 class UploadCSV(LoginRequiredMixin, TemplateView):
@@ -40,10 +32,11 @@ class UploadCSV(LoginRequiredMixin, TemplateView):
         for i, column in enumerate(csv.reader(io_string, delimiter=',', quotechar="|")):
             if column[0]:
                 teacher_inst = TeachersModel.objects.filter(email=column[3]).last()
-                # if teacher_inst:
-                #     messages.error(request, f'Skipped: Teacher with this email: {teacher_inst.email} already exists')
-                #     continue
-                # teacher_inst = TeachersModel()
+                if teacher_inst:
+                    messages.error(request, f'Skipped: Teacher with this email: {teacher_inst.email} already exists')
+                    continue
+
+                teacher_inst = TeachersModel()
                 teacher_inst.first_name = column[0]
                 teacher_inst.last_name = column[1]
                 teacher_inst.profile_picture = column[2]
