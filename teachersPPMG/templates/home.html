@@ -4,25 +4,19 @@
 {% block title %}{% trans "Dashboard" %}{% endblock %}
 {% block content %}
 
-<div class="row">
+<div class="row pt-5">
     <div class="col text-center"><h4>Teachers Directory</h4></div>
 </div>
 <hr/>
 <a href="{% url 'admin_upload_view' %}">Upload Teacher Details</a>
 <div class="row my-3">
-  <div class="col-sm alert dashboard-alert-yellow mx-2">
-    <div><small>Active Loans</small></div>
-    <h4>aa</h4>
-  </div>
+
   <div class="col-sm alert dashboard-alert-blue mx-2">
     <div><small>Total Teachers Count</small></div>
     <h4>{{teachers|length}}</h4>
 
   </div>
-  <div class="col-sm alert dashboard-alert-green mx-2">
-    <div><small>Available Limit</small></div>
-    <h4>$asfd</h4>
-  </div>
+
 </div>
 
 <div class="row">
@@ -33,9 +27,9 @@
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th class="d-none d-sm-block">Email</th>
-                    <th>Action</th>
+                    <th>Email</th>
                     <th>Taught</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -43,9 +37,9 @@
                 <tr style="cursor: pointer" data-href="{% url 'profile_view' id=teacher.id %}">
                     <td><a><strong>{{teacher.first_name}}</strong></a></td>
                     <td>{{teacher.last_name}}</td>
-                    <td class="d-none d-sm-block"><a>{{teacher.email}}</a></td>
-                    <td><a href="{% url 'profile_view' id=teacher.id %}" target="_blank">Teach</a></td>
+                    <td><a>{{teacher.email}}</a></td>
                     <td>{{teacher.subjects_taught}}</td>
+                    <td><a href="{% url 'profile_view' id=teacher.id %}" target="_blank">Teach</a></td>
                 </tr>
                 {% endfor %}
                 </tbody>
