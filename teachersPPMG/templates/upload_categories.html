@@ -3,8 +3,10 @@
 {% load i18n %}
 {% block title %}{% trans "Upload Tearchers" %}{% endblock %}
 {% block content %}
-
-<h1 class="text-center">PPMG Test</h1>
+<div class="row pt-5">
+    <div class="col text-center"><h4>Teachers Directory</h4></div>
+</div>
+<hr/>
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <label for="file1"> Upload a file</label>
