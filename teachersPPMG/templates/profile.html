@@ -20,6 +20,16 @@
         <table class="table table-hover">
             <tbody>
             <tr>
+                <th>Profile Picture</th>
+                {% if '.jpg' in teacher.profile_picture or '.JPG' in teacher.profile_picture or '.png' in teacher.profile_picture or '.PNG' in teacher.profile_picture %}
+                    {% with 'imgs/teachers/'|add:teacher.profile_picture as image_static %}
+                    <td><img src="{% static image_static %}" alt="Profile Picture" width="15%"/></td>
+                    {% endwith %}
+                {%else%}
+                    <td><img src="http://www.gravatar.com/avatar/3b3be63a4c2a439b013787725dfce802?d=mp"/></td>
+                {% endif %}
+            </tr>
+            <tr>
                 <th>First Name</th>
                 <td>{{teacher.first_name}}</td>
             </tr>
@@ -27,10 +37,7 @@
                 <th>Last Name</th>
                 <td>{{teacher.last_name}}</td>
             </tr>
-            <tr>
-                <th>Profile Picture</th>
-                <td>{{teacher.profile_picture}}</td>
-            </tr>
+
             <tr>
                 <th>Email</th>
                 <td>{{teacher.email}}</td>
