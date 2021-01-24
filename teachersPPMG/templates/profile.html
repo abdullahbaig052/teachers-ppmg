@@ -9,8 +9,9 @@
 
 {% block content %}
 
-<div class="row">
-    <div class="col text-center"><h4>{{teacher.first_name}} {{teacher.last_name}}</h4></div>
+<div class="row pt-5">
+    <div class="col text-center"><h4>{{teacher.first_name}} {{teacher.last_name}}</h4>
+    <h6><a href="{% url 'home_view' %}">Back to Directory</a></h6></div>
 </div>
 <hr/>
 <h6 class="text-center alert dashboard-alert-blue dashboard-leaf text-uppercase">Profile Details</h6><!-- @@ changed to alert-secondary, added text-uppercase -->
