@@ -1,5 +1,5 @@
 # teachers-ppmg
-Test for PPMG Dubai group.
+Test for Python Developer - Dubai, UAE.
 
 1. Clone git@github.com:abdullahbaig052/teachers-ppmg.git or download as Zip as my account 2fa.
 2. Create virtualEnv then activate it
